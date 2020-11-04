@@ -22,7 +22,8 @@
         <div class="upload_button_holder">
           <a href="#" class="upload_button">Upload</a>
           <%-cloudinary.uploader.image_upload_tag('image_id', { callback:
-          cloudinary_cors, return_delete_token: true })%>
+          cloudinary_cors, return_delete_token: true,
+          tags:'client_side_direct_tag' })%>
         </div>
         <span class="status"></span>
       </div>

@@ -23,7 +23,8 @@
           <a href="#" class="upload_button">Upload</a>
 
           <%-cloudinary.uploader.unsigned_image_upload_tag('image_id',
-          preset_name,{ callback: cloudinary_cors })%>
+          preset_name,{ callback: cloudinary_cors, tags:
+          'client_side_direct_unsigned_tag' })%>
         </div>
         <span class="status"></span>
       </div>

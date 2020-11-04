@@ -45,7 +45,7 @@ function create_through_server(req, res) {
   // Upload file to Cloudinary
   cloudinary.uploader
     .upload(imageFile, {
-      tags: "express_sample",
+      tags: "cloudinary_coding_exercise_tag",
       width: 500,
       height: 500,
       crop: "limit",
@@ -151,6 +151,16 @@ function create_direct(req, res) {
   var image = new cloudinary.PreloadedFile(req.body.image_id);
   // check that image resolved from image_id is valid
   if (image.is_valid()) {
+    //conditionally render tags based on upload method
+    cloudinary.uploader.add_tag(
+      req.body.type === "direct"
+        ? "server_side_direct_signed_upload_tag"
+        : "server_side_direct_unsigned_upload_tag",
+      image.public_id,
+      (error, result) => {
+        console.log(result, error);
+      }
+    );
     photo.image = image.toJSON();
     console.dir(photo.image);
   }
