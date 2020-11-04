@@ -50,6 +50,14 @@
             <a href="#" class="toggle_info">Hide transformations</a>
             <table class="thumbnails">
               <% var transformations = [
+                {  transformation: [ 
+                    {crop: "thumb", height: 150, width: 150 }, 
+                    {overlay: {url: "https://res.cloudinary.com/dl2gen7iz/image/upload/v1604521644/watermark_gaa29e.png"}} 
+                ]},
+                { transformation: [
+                    {height: 150, width: 150, saturation: 50}, 
+                    {effect: "saturation:50"}
+                ]},
                 { crop : "fill", radius : 10, height : 150, width : 150 },
                 { crop : "scale", height : 150, width : 150 },
                 { crop : "fit", height : 150, width : 150 },
