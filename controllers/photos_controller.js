@@ -179,6 +179,16 @@ function create_direct(req, res) {
     });
 }
 
+function deletePhoto(req, res) {
+  Photo.find(req.params.id).then((photo) => {
+    photo.destroy();
+    res.redirect("/");
+  });
+  // .then(function (deletedPhoto) {
+  //   res.redirect("/", console.log(deletedPhoto));
+  // });
+}
+
 module.exports.wire = function (app) {
   // index
   app.get("/", index);
@@ -192,4 +202,7 @@ module.exports.wire = function (app) {
   app.get("/photos/add_direct", add_direct);
   app.get("/photos/add_direct_unsigned", add_direct_unsigned);
   app.post("/photos/direct", create_direct);
+
+  // delete from gallery
+  app.delete("/photos/:id", deletePhoto);
 };
