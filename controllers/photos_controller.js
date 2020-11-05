@@ -182,9 +182,15 @@ function create_direct(req, res) {
 //Added function to delete photo from gallery
 function deletePhoto(req, res) {
   Photo.find(req.params.id).then((photo) => {
+    cloudinary.uploader.destroy(photo.image.public_id);
     photo.destroy();
     res.redirect("/");
   });
+
+  // Photo.find(req.params.id).then((photo) => {
+  //   photo.destroy();
+  //   res.redirect("/");
+  // });
 }
 
 module.exports.wire = function (app) {
