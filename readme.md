@@ -37,3 +37,4 @@
 - Adjusted Method Override to accept ("\_method") format. For no reason really, it's just what I'm accustomed to.
 - Added delete route/method to controller.
 - 'Juggled' around with jugglingdb for a bit until I figured out the right sequence of methods to delete a single record.
+- Added a call to the upload API to delete image from Cloudinary Media Library
