@@ -24,7 +24,7 @@ require("./config/schema");
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(methodOverride("_method"));
+app.use(methodOverride("_method")); //update method override format for delete route url
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("views", path.join(__dirname, "/views/"));
 app.use("/node_modules", express.static(path.join(__dirname, "/node_modules")));

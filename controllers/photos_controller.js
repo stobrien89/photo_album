@@ -45,7 +45,7 @@ function create_through_server(req, res) {
   // Upload file to Cloudinary
   cloudinary.uploader
     .upload(imageFile, {
-      tags: "cloudinary_coding_exercise_tag",
+      tags: "server_side_upload_tag",
       width: 500,
       height: 500,
       crop: "limit",
@@ -179,14 +179,12 @@ function create_direct(req, res) {
     });
 }
 
+//Added function to delete photo from gallery
 function deletePhoto(req, res) {
   Photo.find(req.params.id).then((photo) => {
     photo.destroy();
     res.redirect("/");
   });
-  // .then(function (deletedPhoto) {
-  //   res.redirect("/", console.log(deletedPhoto));
-  // });
 }
 
 module.exports.wire = function (app) {
