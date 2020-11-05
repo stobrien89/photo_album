@@ -1,4 +1,4 @@
-#Photo Album Sample Project
+# Photo Album Sample Project
 
 ## Setting up
 
