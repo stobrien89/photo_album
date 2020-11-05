@@ -186,11 +186,6 @@ function deletePhoto(req, res) {
     photo.destroy();
     res.redirect("/");
   });
-
-  // Photo.find(req.params.id).then((photo) => {
-  //   photo.destroy();
-  //   res.redirect("/");
-  // });
 }
 
 module.exports.wire = function (app) {
