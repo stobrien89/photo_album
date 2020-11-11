@@ -12,15 +12,15 @@
 
 ### 1. Limiting image size upon upload
 
-    #### Direct signed/unsigned client-side upload
+#### Direct signed/unsigned client-side upload
 
-    - Added blueimp file upload and jQuery/jQueryui
-    - Adjusted/uncommented script tags in unsigned/signed direct upload views
-    - Set maxWidth and maxHeight to 500, but those properties appear to constrict size to one pixel less than the given value (501 x 501 would be most precise).
+- Added blueimp file upload and jQuery/jQueryui
+- Adjusted/uncommented script tags in unsigned/signed direct upload views
+- Set maxWidth and maxHeight to 500, but those properties appear to constrict size to one pixel less than the given value (501 x 501 would be most precise).
 
-    #### Server-side upload
+#### Server-side upload
 
-    - Added width/height properties and crop of "limit" via the upload API
+- Added width/height properties and crop of "limit" via the upload API
 
 ### 2. Tagging uploaded images
 
