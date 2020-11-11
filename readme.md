@@ -10,7 +10,7 @@
 
 ## Steps taken:
 
-### 1. Limiting image size upon upload:
+### 1. Limiting image size upon upload
 
     #### Direct signed/unsigned client-side upload
 
